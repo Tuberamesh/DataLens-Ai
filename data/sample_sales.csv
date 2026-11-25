@@ -1,0 +1,10 @@
+
+order_id,product,category,region,quantity,unit_price,revenue
+1001,Laptop,Electronics,South,2,50000,100000
+1002,Mouse,Accessories,North,5,500,2500
+1003,Keyboard,Accessories,West,3,1200,3600
+1004,Monitor,Electronics,South,2,12000,24000
+1005,Laptop,Electronics,East,1,50000,50000
+1006,Mouse,Accessories,North,4,500,2000
+1007,Monitor,Electronics,West,1,12000,12000
+1008,Keyboard,Accessories,South,2,1200,2400
