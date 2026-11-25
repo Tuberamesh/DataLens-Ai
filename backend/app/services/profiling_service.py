@@ -1,6 +1,6 @@
 
 import pandas as pd
-
+from app.services.quality_service import analyze_data_quality
 
 def profile_dataset(df: pd.DataFrame) -> dict:
     """Generate a structured profile of an uploaded dataset."""
@@ -44,7 +44,7 @@ def profile_dataset(df: pd.DataFrame) -> dict:
             .to_dict()
         )
 
-    return {
+        return {
         "row_count": int(rows),
         "column_count": int(columns),
         "columns": column_profiles,
@@ -53,6 +53,10 @@ def profile_dataset(df: pd.DataFrame) -> dict:
         "duplicate_rows": int(df.duplicated().sum()),
         "total_missing_values": int(df.isna().sum().sum()),
         "numeric_summary": numeric_summary,
+
+        # NEW: Data quality analysis
+        "data_quality": analyze_data_quality(df),
+
         "preview": (
             df.head(5)
             .astype(object)

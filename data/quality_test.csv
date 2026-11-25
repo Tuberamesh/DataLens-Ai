@@ -1,0 +1,13 @@
+id,region,sales,constant_status
+1,North,10,active
+2,South,12,active
+3,East,11,active
+4,West,13,active
+5,North,12,active
+6,South,14,active
+7,East,11,active
+8,West,15,active
+9,North,12,active
+10,South,14,active
+11,,1000,active
+11,,1000,active
